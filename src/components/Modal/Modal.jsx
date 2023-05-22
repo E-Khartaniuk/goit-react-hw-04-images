@@ -4,7 +4,6 @@ import css from '../Modal/Modal.module.css';
 
 export function Modal({ bigImg, onClose, alt }) {
   const [imageLoaded, setImageLoaded] = useState(false);
-  const [currentIndex, setCurrentIndex] = useState(0);
 
   const handleImageLoad = () => {
     setImageLoaded(!imageLoaded);

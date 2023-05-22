@@ -12,7 +12,6 @@ export function App() {
   const [page, setPage] = useState(1);
   const [inputValue, setInputValue] = useState('');
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(null);
 
   useEffect(() => {
     const query = inputValue.trim();
@@ -26,7 +25,7 @@ export function App() {
       .catch(err => {
         console.log('Error fetching images from Pixabay:', err);
       });
-  }, [inputValue]);
+  });
 
   const loadMoreImages = () => {
     const nextPage = page + 1;
@@ -50,6 +49,7 @@ export function App() {
     if (searchValue === inputValue) {
       return;
     }
+
     setImages([]);
     setInputValue(searchValue);
   };
