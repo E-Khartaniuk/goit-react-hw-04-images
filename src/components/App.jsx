@@ -13,19 +13,19 @@ export function App() {
   const [inputValue, setInputValue] = useState('');
   const [loading, setLoading] = useState(false);
 
-  useEffect(() => {
+useEffect(() => {
     const query = inputValue.trim();
     if (query === '') {
       return;
     }
     getFeth(query)
       .then(data => {
-         setImages(prevImages => [...prevImages, ...data.hits]);
+        setImages(prevImages => [...prevImages, ...data.hits]);
       })
       .catch(err => {
         console.log('Error fetching images from Pixabay:', err);
       });
-  },[inputValue]);
+  }, [inputValue]);
 
   const loadMoreImages = () => {
     const nextPage = page + 1;
