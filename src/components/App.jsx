@@ -20,7 +20,7 @@ export function App() {
     }
     getFeth(query)
       .then(data => {
-        setImages([...images, ...data.hits]);
+         setImages(prevImages => [...prevImages, ...data.hits]);
       })
       .catch(err => {
         console.log('Error fetching images from Pixabay:', err);
