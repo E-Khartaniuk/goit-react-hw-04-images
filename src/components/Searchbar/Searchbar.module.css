@@ -1,0 +1,29 @@
+.searchbar {
+  background-color: black;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: row;
+}
+
+.form {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.button {
+  border-radius: 2px;
+  width: 120px;
+  height: 28px;
+  margin-left: 12px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: rgb(66, 66, 66);
+  color: white;
+}
+
+.input {
+  height: 28px;
+  border-radius: 2px;
+}
