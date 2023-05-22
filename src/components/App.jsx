@@ -13,7 +13,7 @@ export function App() {
   const [inputValue, setInputValue] = useState('');
   const [loading, setLoading] = useState(false);
 
-  useEffect(() => {
+useEffect(() => {
     const query = inputValue.trim();
     if (query === '') {
       return;
