@@ -25,7 +25,7 @@ export function App() {
       .catch(err => {
         console.log('Error fetching images from Pixabay:', err);
       });
-  });
+  },[inputvalue]);
 
   const loadMoreImages = () => {
     const nextPage = page + 1;
